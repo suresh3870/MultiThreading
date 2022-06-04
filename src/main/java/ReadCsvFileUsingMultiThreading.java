@@ -3,9 +3,9 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class ReadCsvFileUsingMultiThreading {
-
     public static void main(String[] args) {
-        ExecutorService executorService = Executors.newFixedThreadPool(10);
+        //long start = System.nanoTime();
+        ExecutorService executorService = Executors.newFixedThreadPool(10); //Execution time: 5844000 nanoseconds
         File filepath= new File("C:\\Users\\MS\\Desktop\\JavaAssignment");
         //File filepath= new File("C:\\Users\\MS\\Desktop\\JavaAssignment\\test");
         File files[]= filepath.listFiles();
@@ -51,6 +51,9 @@ public class ReadCsvFileUsingMultiThreading {
 
             });
             }
+        /*long end = System.nanoTime();
+        long execution = end - start;
+        System.out.println("Execution time: " + execution + " nanoseconds");*/
         executorService.shutdown();
         }
 
