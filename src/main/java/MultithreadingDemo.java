@@ -29,7 +29,7 @@ class Hello implements Runnable{
         }
     }
 }
-public class Main {
+public class MultithreadingDemo {
     public static void main(String[] args) {
         Runnable obj1 = new Hi();
         Runnable obj2 = new Hello();
